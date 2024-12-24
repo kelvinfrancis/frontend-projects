@@ -1,0 +1,42 @@
+<title>Arkanoid en JavaScript</title>
+<style>
+    body {
+        background-color: #111;
+    }
+
+    canvas {
+        border: 4px solid #fff;
+        border-bottom: transparent;
+        background: #000;
+        margin: 0 auto;
+        display: block;
+    }
+</style>
+
+<canvas></canvas>
+
+<script>
+    const canvas = document.querySelector('canvas')
+    const ctx = canvas.getContext('2d') // 2D rendering 
+
+    canvas.width = 448
+    canvas.height = 400
+    
+    // Variables del juego
+    let counter = 0;
+    
+    function drawBall() {}
+    function drawPaddle() {}
+    function drawBricks() {}
+
+    function draw () {
+        // hacer los dibujos y checks de colisiones
+        // dibujar los elementos
+        drawBall()
+        drawPaddle()
+        drawBricks()
+        window.requestAnimationFrame(draw) // Se ejecuta antes de que se pinte los frames
+    }
+
+    draw()
+</script>
